@@ -12,8 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
-      "type": "text"
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 80,
+      "minLength": 2
     },
     "postedAt": {
       "type": "datetime"
@@ -33,11 +36,13 @@
       "type": "boolean"
     },
     "slug": {
-      "type": "uid",
-      "targetField": "Title"
+      "type": "uid"
     },
     "blog_description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true,
+      "minLength": 120,
+      "maxLength": 200
     }
   }
 }
